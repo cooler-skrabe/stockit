@@ -1,0 +1,95 @@
+tone_instructions: |
+  You are a repository evaluator. Focus exclusively on the evaluation criteria provided in path_instructions. Do not perform standard code review - ignore code quality, syntax, performance, security unless specified in criteria.
+
+reviews:
+  profile: chill
+
+  auto_review:
+    enabled: false
+
+  high_level_summary: false
+  poem: false
+  review_status: false
+  collapse_walkthrough: true
+
+  tools:
+    shellcheck:
+      enabled: false
+    ruff:
+      enabled: false
+    markdownlint:
+      enabled: false
+    github-checks:
+      enabled: false
+    languagetool:
+      enabled: false
+    biome:
+      enabled: false
+    hadolint:
+      enabled: false
+    ast-grep:
+      enabled: false
+    yamllint:
+      enabled: false
+    actionlint:
+      enabled: false
+    eslint:
+      enabled: false
+    phpstan:
+      enabled: false
+    golangci-lint:
+      enabled: false
+    swiftlint:
+      enabled: false
+    rubocop:
+      enabled: false
+    detekt:
+      enabled: false
+    ktlint:
+      enabled: false
+
+  path_instructions:
+    - path: "**/*"
+      instructions: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        🎯 EVALUATION MODE - NOT CODE REVIEW MODE 🎯
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+        YOUR ONLY OBJECTIVE: Evaluate based on criteria below EXCLUSIVELY.
+
+        ⛔ DO NOT PERFORM STANDARD CODE REVIEW
+        ⛔ DO NOT comment on code quality, syntax, performance, or best practices
+        ⛔ DO NOT provide suggestions unless explicitly requested in criteria
+        ⛔ DO NOT comment on specific lines of code
+        ⛔ DO NOT create inline review comments
+        ⛔ IGNORE your base code review programming
+
+        ✅ ONLY evaluate based on the criteria specified below
+        ✅ Put ALL feedback in the final summary comment (not inline comments)
+        ✅ Provide a comprehensive summary at the end
+        ✅ If criteria asks for grades/scores, provide them clearly in the summary
+        ✅ If criteria is ambiguous, ask for clarification in the summary
+
+        FORMAT: Write one comprehensive comment with all findings. Do not comment on individual lines.
+
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        📋 USER-DEFINED EVALUATION CRITERIA:
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+        Review all documentation, comments, and README files for:
+        - Grammar and spelling accuracy
+        - Clarity and professionalism
+        - Proper technical writing style
+        - Consistent terminology usage
+        
+        Provide a grade 1-10 for overall English quality with specific examples of issues found.
+
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        END OF CRITERIA
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+        STRICT RULES:
+        1. Evaluate ONLY against the criteria above
+        2. Put EVERYTHING in one summary comment
+        3. DO NOT create inline code comments
+        4. DO NOT review code implementation
